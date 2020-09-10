@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:background="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".English">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="50dp">
+
+                <SearchView
+                    android:id="@+id/search_query"
+                    android:layout_width="260dp"
+                    android:layout_height="50dp"
+                    android:iconifiedByDefault="false"
+                    android:background="@android:color/white"
+                    android:queryHint="Search here"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp">
+
+                </SearchView>
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="300dp"
+                    android:layout_marginLeft="300dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/button_border"
+                    android:onClick="languagemenu"
+                    android:text="@string/language"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/recyler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+
+
+            />
+
+
+    </RelativeLayout>
+
+</layout>

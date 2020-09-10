@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="390dp"
+    android:layout_height="150dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="25dp"
+    android:transitionName="newsPaperTransition">
+
+    <ImageView
+        android:id="@+id/recycler_image"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:contentDescription="nes"
+        app:srcCompat="@drawable/dinamani" />
+
+    <TextView
+        android:id="@+id/recycler_text"
+        android:layout_width="140dp"
+        android:layout_gravity="right"
+        android:layout_height="match_parent"
+        android:text="@string/dinamani"
+        android:background="@drawable/button_border"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:textSize="20sp"
+
+        />
+
+
+</androidx.cardview.widget.CardView>
