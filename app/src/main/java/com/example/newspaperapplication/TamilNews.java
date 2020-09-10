@@ -45,6 +45,24 @@ public class TamilNews extends Fragment implements RecylerViewAdapter.Recycler_C
         if(list.size()==0) {
             list.add(new RecylerHelperClass(R.drawable.dinamani, "Dinamani", "https://www.dinamani.com/"));
             list.add(new RecylerHelperClass(R.drawable.thina_thanthi, "Dhinathanthi", "https://www.dailythanthi.com/"));
+            list.add(new RecylerHelperClass(R.drawable.dinakaran, "Dinakaran", "https://m.dinakaran.com/amp"));
+            list.add(new RecylerHelperClass(R.drawable.hindutamil, "Hindutamil", "https://www.hindutamil.in/"));
+            list.add(new RecylerHelperClass(R.drawable.vikatan, "vikatan", "https://www.vikatan.com/"));
+            list.add(new RecylerHelperClass(R.drawable.murasoli, "Murasoli", "https://www.murasoli.in/"));
+            list.add(new RecylerHelperClass(R.drawable.thinaboomi, "Thinaboomi", "https://www.thinaboomi.com/"));
+            list.add(new RecylerHelperClass(R.drawable.vanakkamindianews, "Vanakkamindianews", "https://vanakkamindianews.com/"));
+            list.add(new RecylerHelperClass(R.drawable.viduthalai, "Viduthalai", "https://viduthalai.in/e-paper.html"));
+            list.add(new RecylerHelperClass(R.drawable.timestamilnews, "Timestamilnews", "https://www.timestamilnews.com/"));
+            list.add(new RecylerHelperClass(R.drawable.maalai_malar, "Maalaimalar", "https://www.maalaimalar.com/amp/"));
+            list.add(new RecylerHelperClass(R.drawable.thamizh_murasu, "Tamilmurasu", "http://www.tamilmurasu.org/"));
+            list.add(new RecylerHelperClass(R.drawable.theekkathir, "Theekkathir", "https://www.theekkathir.in/"));
+            list.add(new RecylerHelperClass(R.drawable.puthiyathalaimurai, "Puthiyathalaimurai", "http://www.puthiyathalaimurai.com/"));
+            list.add(new RecylerHelperClass(R.drawable.bbc, "BBCNewsTamil", "https://www.bbc.com/tamil"));
+            list.add(new RecylerHelperClass(R.drawable.oneindia, "OneIndia", "https://tamil.oneindia.com/"));
+            list.add(new RecylerHelperClass(R.drawable.ntamil, "NTamil", "http://www.ntamil.com/"));
+            list.add(new RecylerHelperClass(R.drawable.kathiravan, "Kathiravan", "https://www.kathiravan.com/"));
+            list.add(new RecylerHelperClass(R.drawable.ntamil, "NTamil", "http://www.ntamil.com/"));
+            list.add(new RecylerHelperClass(R.drawable.maalai_malar, "Maalaimalar", "https://www.maalaimalar.com/amp/"));
             list.add(new RecylerHelperClass(R.drawable.dina_malar, "Dhinamalar", "https://www.dinamalar.com/"));
         }
         final RecylerViewAdapter recylerViewAdapter = new RecylerViewAdapter(list,this);
