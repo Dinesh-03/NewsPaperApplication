@@ -1,16 +1,15 @@
 <resources>
     <string name="app_name">NewsDope</string>
-    <string name="tamil">தமிழ்</string>
+    <string name="tamil">Tamil</string>
     <string name="english">English</string>
-    <string name="Hindi">हिंदी</string>
+    <string name="Hindi">Hindi</string>
     <string name="search">Search</string>
     <string name="language">Language</string>
-    <string name="dhinamalar">தினமலர்</string>
-    <string name="dinamani">தினமணி</string>
-    <string name="dhinathanthi">தினதந்தி</string>
+    <string name="dhinamalar">dhinamalar</string>
+    <string name="dinamani">dinamani</string>
+    <string name="dhinathanthi">dhinathanthi</string>
     <string name="live_news_videos">Live News Videos</string>
     <string name="newspaper">NewsPaper</string>
     <string name="magazine">Magazine</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

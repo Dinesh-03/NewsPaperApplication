@@ -29,7 +29,7 @@ public class RecylerViewAdapter extends RecyclerView.Adapter implements Filterab
 
     public RecylerViewAdapter(List<News> recylerHelperClasses,Recycler_Click recycler_click) {
         this.recylerHelperClasses = recylerHelperClasses;
-        this.recylerHelperClassesall=new ArrayList<>(recylerHelperClasses);// this.recyclerHelperClassesall=recyclerHelperClasses
+        this.recylerHelperClassesall=new ArrayList<>(recylerHelperClasses);
         this.recycler_click=recycler_click;
 
     }

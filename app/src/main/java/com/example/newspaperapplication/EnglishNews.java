@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class TamilNews extends Fragment implements RecylerViewAdapter.Recycler_Click{
-    public TamilNews() {
+public class EnglishNews extends Fragment implements RecylerViewAdapter.Recycler_Click{
+    public EnglishNews() {
         // Required empty public constructor
     }
     List<News> list = new ArrayList<>();
@@ -31,14 +31,14 @@ public class TamilNews extends Fragment implements RecylerViewAdapter.Recycler_C
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tamil_news, container, false);
+        return inflater.inflate(R.layout.fragement_english_news, container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         context=view.getContext();
-        RecyclerView recyclerView = view.findViewById(R.id.tamilNewsRecyclerView);
+        RecyclerView recyclerView = view.findViewById(R.id.englishNewsRecyclerView);
         recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 1));
@@ -50,14 +50,14 @@ public class TamilNews extends Fragment implements RecylerViewAdapter.Recycler_C
             list.add(new RecylerHelperClass(R.drawable.vikatan, "vikatan", "https://www.vikatan.com/"));
             list.add(new RecylerHelperClass(R.drawable.murasoli, "Murasoli", "https://www.murasoli.in/"));
             list.add(new RecylerHelperClass(R.drawable.thinaboomi, "Thinaboomi", "https://www.thinaboomi.com/"));
-            list.add(new RecylerHelperClass(R.drawable.vanakkamindianews, "Vanakkam india news", "https://vanakkamindianews.com/"));
+            list.add(new RecylerHelperClass(R.drawable.vanakkamindianews, "Vanakkamindianews", "https://vanakkamindianews.com/"));
             list.add(new RecylerHelperClass(R.drawable.viduthalai, "Viduthalai", "https://viduthalai.in/e-paper.html"));
-            list.add(new RecylerHelperClass(R.drawable.timestamilnews, "Times tamil news", "https://www.timestamilnews.com/"));
+            list.add(new RecylerHelperClass(R.drawable.timestamilnews, "Timestamilnews", "https://www.timestamilnews.com/"));
             list.add(new RecylerHelperClass(R.drawable.maalai_malar, "Maalaimalar", "https://www.maalaimalar.com/amp/"));
             //list.add(new RecylerHelperClass(R.drawable.thamizh_murasu, "Tamilmurasu", "http://www.tamilmurasu.org/"));
             //list.add(new RecylerHelperClass(R.drawable.theekkathir, "Theekkathir", "https://www.theekkathir.in/"));
             //list.add(new RecylerHelperClass(R.drawable.puthiyathalaimurai, "Puthiyathalaimurai", "http://www.puthiyathalaimurai.com/"));
-            list.add(new RecylerHelperClass(R.drawable.bbc, "BBCNews Tamil", "https://www.bbc.com/tamil"));
+            list.add(new RecylerHelperClass(R.drawable.bbc, "BBCNewsTamil", "https://www.bbc.com/tamil"));
             list.add(new RecylerHelperClass(R.drawable.oneindia, "OneIndia", "https://tamil.oneindia.com/"));
             //list.add(new RecylerHelperClass(R.drawable.ntamil, "NTamil", "http://www.ntamil.com/"));
             list.add(new RecylerHelperClass(R.drawable.kathiravan, "Kathiravan", "https://www.kathiravan.com/"));
