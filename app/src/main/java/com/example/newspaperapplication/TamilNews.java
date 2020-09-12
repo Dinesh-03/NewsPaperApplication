@@ -44,7 +44,6 @@ public class TamilNews extends Fragment implements RecylerViewAdapter.Recycler_C
         context=view.getContext();
         searchView.setVisibility(View.VISIBLE);
         RecyclerView recyclerView = view.findViewById(R.id.tamilNewsRecyclerView);
-        recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 1));
         if(list.size()==0) {

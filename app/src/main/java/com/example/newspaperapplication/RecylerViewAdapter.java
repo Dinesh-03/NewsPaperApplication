@@ -54,6 +54,7 @@ public class RecylerViewAdapter extends RecyclerView.Adapter implements Filterab
         switch (getItemViewType(position)){
             case News.TYPE_PAPER:
                 ((PaperViewHolder)holder).bindView(position);
+
                 break;
             default:
                 ((DetailsViewHolder)holder).bindView(position);

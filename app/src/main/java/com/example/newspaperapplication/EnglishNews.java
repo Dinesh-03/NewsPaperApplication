@@ -43,7 +43,6 @@ public class EnglishNews extends Fragment implements RecylerViewAdapter.Recycler
         context=view.getContext();
         searchView.setVisibility(View.VISIBLE);
         RecyclerView recyclerView = view.findViewById(R.id.englishNewsRecyclerView);
-        recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 1));
         if(list.size()==0) {
@@ -64,7 +63,7 @@ public class EnglishNews extends Fragment implements RecylerViewAdapter.Recycler
             list.add(new RecylerHelperClass(R.drawable.heraldgoa, "Herald Goa", "https://www.heraldgoa.in/index.php"));
             list.add(new RecylerHelperClass(R.drawable.orissapost, "Orissa post", "https://www.orissapost.com/"));
             list.add(new RecylerHelperClass(R.drawable.mumbaimirror, "Mumbai   Mirror", "https://mumbaimirror.indiatimes.com/" ));
-            list.add(new RecylerHelperClass(R.drawable.nagalandpost, "Nagaland   post", "http://www.nagalandpost.com/"));
+            //list.add(new RecylerHelperClass(R.drawable.nagalandpost, "Nagaland   post", "http://www.nagalandpost.com/"));
             list.add(new RecylerHelperClass(R.drawable.dailypioneer, "Daily Pioneer", "https://www.dailypioneer.com/"));
             list.add(new RecylerHelperClass(R.drawable.timesofindia, "Times of   India", "https://m.timesofindia.com/"));
         }

@@ -43,7 +43,6 @@ public class HindiNews extends Fragment implements RecylerViewAdapter.Recycler_C
         context=view.getContext();
         searchView.setVisibility(View.VISIBLE);
         RecyclerView recyclerView = view.findViewById(R.id.hindiNewsRecyclerView);
-        recyclerView.setHasFixedSize(true);
 
         recyclerView.setLayoutManager(new GridLayoutManager(view.getContext(), 1));
         if(list.size()==0) {
@@ -54,10 +53,14 @@ public class HindiNews extends Fragment implements RecylerViewAdapter.Recycler_C
             list.add(new RecylerHelperClass(R.drawable.jansatta, "Jansatta", " https://www.jansatta.com/"));
             list.add(new RecylerHelperClass(R.drawable.navodayatimes, "Navodaya times", "https://www.navodayatimes.in/"));
             list.add(new RecylerHelperClass(R.drawable.navbharattimes, "Navbharat times", "https://navbharattimes.indiatimes.com/"));
-            //list.add(new RecylerHelperClass(R.drawable.janmorcha, "Janmorcha", "http://janmorcha.in/"));
             list.add(new RecylerHelperClass(R.drawable.punjabkesari, "Punjab   kesari", "https://m.punjabkesari.in/"));
             list.add(new RecylerHelperClass(R.drawable.patrika, "Patrika", "https://m.patrika.com/"));
-            //list.add(new RecylerHelperClass(R.drawable.parichaytimes, "Parichaytimes", "http://www.parichaytimes.info/"));
+            list.add(new RecylerHelperClass(R.drawable.bhaskar, "Bhaskar", "https://www.bhaskar.com/"));
+            list.add(new RecylerHelperClass(R.drawable.livehindustan, "Live Hindustan", "https://www.livehindustan.com/"));
+            list.add(new RecylerHelperClass(R.drawable.prabhatkhabar, "Prabhat Khabar", "https://www.prabhatkhabar.com/"));
+            list.add(new RecylerHelperClass(R.drawable.divyahimachal, "Divya Himachal", "https://www.divyahimachal.com/"));
+            list.add(new RecylerHelperClass(R.drawable.dainiktribuneonline, "Dainik Tribune online", "https://www.dainiktribuneonline.com/"));
+            //list.add(new RecylerHelperClass(R.drawable.virarjun, "VirArjun", "http://www.virarjun.com/"));
         }
         recylerViewAdapter = new RecylerViewAdapter(list,this);
         recyclerView.setAdapter(recylerViewAdapter);
