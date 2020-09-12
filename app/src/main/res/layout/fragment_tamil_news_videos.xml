@@ -1,18 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".TamilNewsVideos"
-    android:background="@drawable/bg">
+    android:layout_span="2"
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/polimer"
+        android:layout_marginStart="2dp"
+        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        app:cardCornerRadius="20dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/polimer"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/puthiya"
+        android:layout_marginStart="2dp"
+        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        app:cardCornerRadius="20dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/puthiya_thalaimurai"/>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sunnews"
+        android:layout_marginStart="2dp"
+        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_row="1"
+        android:layout_marginBottom="2dp"
+        android:layout_column="0"
+        app:cardCornerRadius="20dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sunnews"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/news7tamil"
+        android:layout_marginStart="2dp"
+        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="2dp"
+        android:layout_row="1"
+        android:layout_marginBottom="2dp"
+        android:layout_column="1"
+        app:cardCornerRadius="20dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/news7_tamil"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sathiyam"
+        android:layout_marginStart="2dp"
+        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_row="2"
+        android:layout_column="0"
+        app:cardCornerRadius="20dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/sathiyam"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/news18"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_row="2"
+        android:layout_column="1"
+        app:cardCornerRadius="20dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/news18_tamilnadu"/>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/jayaplus"
+        android:layout_marginStart="2dp"
+        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_row="3"
+        android:layout_column="0"
+        app:cardCornerRadius="20dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/jayaplus"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rajnews"
+        android:layout_marginStart="2dp"
+        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_row="3"
+        android:layout_column="1"
+        app:cardCornerRadius="20dp"
+        >
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="News Videos"
-        android:textColor="@android:color/darker_gray"
-        android:gravity="center"
-        android:textSize="100sp"/>
+        android:src="@drawable/rajnews"/>
 
-</FrameLayout>
+</androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/kalaingar"
+        android:layout_marginStart="2dp"
+        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_row="4"
+        android:layout_column="0"
+        app:cardCornerRadius="20dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/kalaingar"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/newsj"
+        android:layout_marginStart="2dp"
+        android:layout_height="130dp"
+        android:layout_width="200dp"
+        android:background="@android:color/black"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_row="4"
+        android:layout_column="1"
+        app:cardCornerRadius="20dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/newsj"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</GridLayout>

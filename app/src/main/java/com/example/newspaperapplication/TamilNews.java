@@ -15,17 +15,21 @@ import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class TamilNews extends Fragment implements RecylerViewAdapter.Recycler_Click{
-    public TamilNews() {
+    SearchView searchView;
+    public TamilNews(SearchView searchView) {
+        this.searchView=searchView;
         // Required empty public constructor
     }
     List<News> list = new ArrayList<>();
     Context context;
+    RecylerViewAdapter recylerViewAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,6 +42,7 @@ public class TamilNews extends Fragment implements RecylerViewAdapter.Recycler_C
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         context=view.getContext();
+        searchView.setVisibility(View.VISIBLE);
         RecyclerView recyclerView = view.findViewById(R.id.tamilNewsRecyclerView);
         recyclerView.setHasFixedSize(true);
 
@@ -50,21 +55,22 @@ public class TamilNews extends Fragment implements RecylerViewAdapter.Recycler_C
             list.add(new RecylerHelperClass(R.drawable.vikatan, "vikatan", "https://www.vikatan.com/"));
             list.add(new RecylerHelperClass(R.drawable.murasoli, "Murasoli", "https://www.murasoli.in/"));
             list.add(new RecylerHelperClass(R.drawable.thinaboomi, "Thinaboomi", "https://www.thinaboomi.com/"));
-            list.add(new RecylerHelperClass(R.drawable.vanakkamindianews, "Vanakkam india news", "https://vanakkamindianews.com/"));
+            list.add(new RecylerHelperClass(R.drawable.vanakkamindianews, "Vanakkam India news", "https://vanakkamindianews.com/"));
             list.add(new RecylerHelperClass(R.drawable.viduthalai, "Viduthalai", "https://viduthalai.in/e-paper.html"));
-            list.add(new RecylerHelperClass(R.drawable.timestamilnews, "Times tamil news", "https://www.timestamilnews.com/"));
+            list.add(new RecylerHelperClass(R.drawable.timestamilnews, "Times Tamil news", "https://www.timestamilnews.com/"));
             list.add(new RecylerHelperClass(R.drawable.maalai_malar, "Maalaimalar", "https://www.maalaimalar.com/amp/"));
             //list.add(new RecylerHelperClass(R.drawable.thamizh_murasu, "Tamilmurasu", "http://www.tamilmurasu.org/"));
             //list.add(new RecylerHelperClass(R.drawable.theekkathir, "Theekkathir", "https://www.theekkathir.in/"));
             //list.add(new RecylerHelperClass(R.drawable.puthiyathalaimurai, "Puthiyathalaimurai", "http://www.puthiyathalaimurai.com/"));
             list.add(new RecylerHelperClass(R.drawable.bbc, "BBCNews Tamil", "https://www.bbc.com/tamil"));
-            list.add(new RecylerHelperClass(R.drawable.oneindia, "OneIndia", "https://tamil.oneindia.com/"));
+            list.add(new RecylerHelperClass(R.drawable.oneindia, "One India", "https://tamil.oneindia.com/"));
             //list.add(new RecylerHelperClass(R.drawable.ntamil, "NTamil", "http://www.ntamil.com/"));
             list.add(new RecylerHelperClass(R.drawable.kathiravan, "Kathiravan", "https://www.kathiravan.com/"));
             //list.add(new RecylerHelperClass(R.drawable.dina_malar, "Dhinamalar", "https://www.dinamalar.com/"));
         }
-        final RecylerViewAdapter recylerViewAdapter = new RecylerViewAdapter(list,this);
-        recyclerView.setAdapter(recylerViewAdapter);
+
+         recylerViewAdapter = new RecylerViewAdapter(list,this);
+         recyclerView.setAdapter(recylerViewAdapter);
 
     }
 
@@ -86,5 +92,11 @@ public class TamilNews extends Fragment implements RecylerViewAdapter.Recycler_C
             startActivity(intent);
 
         }
+    }
+    public  List<News> newsList(){
+        return list;
+    }
+    public RecylerViewAdapter getRecyclerAdapter(){
+        return  recylerViewAdapter;
     }
 }

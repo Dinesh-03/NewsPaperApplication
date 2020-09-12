@@ -26,20 +26,21 @@
 
                 <SearchView
                     android:id="@+id/search_query"
-                    android:layout_width="260dp"
+                    android:layout_width="250dp"
                     android:layout_height="50dp"
                     android:iconifiedByDefault="false"
                     android:background="@android:color/white"
                     android:layout_marginLeft="12dp"
                     android:queryHint="Search here"
-                    android:layout_marginStart="12dp">
+                    android:layout_marginStart="12dp"
+                    android:visibility="gone">
 
                 </SearchView>
                 <Button
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="300dp"
-                    android:layout_marginLeft="300dp"
+                    android:layout_marginStart="270dp"
+                    android:layout_marginLeft="270dp"
                     android:layout_marginTop="2dp"
                     android:background="@drawable/button_border"
                     android:onClick="languagemenu"

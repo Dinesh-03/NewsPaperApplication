@@ -29,7 +29,7 @@ import com.example.newspaperapplication.databinding.ActivityTamilBinding;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Hindi extends AppCompatActivity  {
+public class Hindi extends AppCompatActivity implements RecylerViewAdapter.Recycler_Click {
     ActivityHindiBinding mainBinding;
     RecyclerView recyclerView;
     SearchView searchView;
@@ -38,18 +38,21 @@ public class Hindi extends AppCompatActivity  {
     LinearLayout frameLayout;
     FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
-
+    RecylerViewAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_hindi);
         frameLayout=findViewById(R.id.frame_layout);
-        HindiNews hindiNews = new HindiNews();
+        searchView=mainBinding.searchQuery;
+        searchView.setVisibility(View.VISIBLE);
+        final HindiNews hindiNews = new HindiNews(searchView);
         if(!fragmentTransaction.isEmpty()){
             fragmentTransaction.remove(hindiNews);
         }
         fragmentTransaction.replace(frameLayout.getId(),hindiNews).commit();
+        searchQuery(hindiNews);
     }
     public void languagemenu(View view) {
         PopupMenu popupMenu = new PopupMenu(context,view);
@@ -85,16 +88,19 @@ public class Hindi extends AppCompatActivity  {
         switch (view.getId()){
             case R.id.newsPaper:
                 Toast.makeText(context,"NewsPaper",Toast.LENGTH_SHORT).show();
-                HindiNews hindiNews = new HindiNews();
+                searchView.setVisibility(View.VISIBLE);
+                HindiNews hindiNews = new HindiNews(searchView);
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 if(!fragmentTransaction.isEmpty()){
                     fragmentTransaction.remove(hindiNews);
                 }
                 fragmentTransaction.replace(frameLayout.getId(),hindiNews);
                 fragmentTransaction.commit();
+                searchQuery(hindiNews);
                 break;
             case R.id.newsVideos:
                 Toast.makeText(context,"NewsVideos", Toast.LENGTH_SHORT).show();
+                searchView.setVisibility(View.GONE);
                 HindiNewsVideos hindiNewsVideos=new HindiNewsVideos();
                 FragmentTransaction fragmentTransaction2 = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction2.replace(frameLayout.getId(),hindiNewsVideos).addToBackStack("TamilNews");
@@ -103,5 +109,25 @@ public class Hindi extends AppCompatActivity  {
 
 
         }
+    }
+
+    @Override
+    public void recycer_OnClick(int position, View view) {
+
+    }
+    public void searchQuery(final HindiNews hindiNews){
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                hindiNews.recylerViewAdapter.getFilter().filter(s);
+                return true;
+            }
+        });
     }
 }

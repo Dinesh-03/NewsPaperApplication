@@ -15,18 +15,21 @@ import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class HindiNews extends Fragment implements RecylerViewAdapter.Recycler_Click{
-    public HindiNews() {
+    SearchView searchView;
+    public HindiNews(SearchView searchView) {
+        this.searchView=searchView;
         // Required empty public constructor
     }
     List<News> list = new ArrayList<>();
     Context context;
-
+    RecylerViewAdapter recylerViewAdapter;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -38,6 +41,7 @@ public class HindiNews extends Fragment implements RecylerViewAdapter.Recycler_C
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         context=view.getContext();
+        searchView.setVisibility(View.VISIBLE);
         RecyclerView recyclerView = view.findViewById(R.id.hindiNewsRecyclerView);
         recyclerView.setHasFixedSize(true);
 
@@ -45,7 +49,7 @@ public class HindiNews extends Fragment implements RecylerViewAdapter.Recycler_C
         if(list.size()==0) {
             list.add(new RecylerHelperClass(R.drawable.amarujala, "Amarujala", "https://www.amarujala.com/"));
             list.add(new RecylerHelperClass(R.drawable.jagran, "Jagran", "https://www.jagran.com/"));
-            list.add(new RecylerHelperClass(R.drawable.dainiknavajyoti, "Dainiknava jyoti", "https://www.dainiknavajyoti.net/"));
+            list.add(new RecylerHelperClass(R.drawable.dainiknavajyoti, "Dainik navajyoti", "https://www.dainiknavajyoti.net/"));
             list.add(new RecylerHelperClass(R.drawable.haribhoomi, "Haribhoomi", "https://www.haribhoomi.com/"));
             list.add(new RecylerHelperClass(R.drawable.jansatta, "Jansatta", " https://www.jansatta.com/"));
             list.add(new RecylerHelperClass(R.drawable.navodayatimes, "Navodaya times", "https://www.navodayatimes.in/"));
@@ -55,7 +59,7 @@ public class HindiNews extends Fragment implements RecylerViewAdapter.Recycler_C
             list.add(new RecylerHelperClass(R.drawable.patrika, "Patrika", "https://m.patrika.com/"));
             //list.add(new RecylerHelperClass(R.drawable.parichaytimes, "Parichaytimes", "http://www.parichaytimes.info/"));
         }
-        final RecylerViewAdapter recylerViewAdapter = new RecylerViewAdapter(list,this);
+        recylerViewAdapter = new RecylerViewAdapter(list,this);
         recyclerView.setAdapter(recylerViewAdapter);
 
     }
@@ -78,5 +82,11 @@ public class HindiNews extends Fragment implements RecylerViewAdapter.Recycler_C
             startActivity(intent);
 
         }
+    }
+    public  List<News> newsList(){
+        return list;
+    }
+    public RecylerViewAdapter getRecyclerAdapter(){
+        return  recylerViewAdapter;
     }
 }
